@@ -1,0 +1,7 @@
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\DemoMVC.exe
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\appsettings.Development.json
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\appsettings.json
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\DemoMVC.dll
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\DemoMVC.deps.json
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\DemoMVC.runtimeconfig.json
+C:\Users\Admin\OneDrive\문서\PTPMQL\DemoMVC\out\DemoMVC.pdb
