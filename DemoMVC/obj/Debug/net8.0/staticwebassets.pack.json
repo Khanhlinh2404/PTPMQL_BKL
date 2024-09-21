@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\DemoMVC.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\OneDrive\\문서\\PTPMQL_BKL\\DemoMVC\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\OneDrive\\문서\\PTPMQL_BKL\\DemoMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

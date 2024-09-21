@@ -1,0 +1,5 @@
+<h1>View Demo cua Student Controler </h1>
+
+dotnet aspnet-codegenerator controller -name StudentController -m Student -dc DemoMVC.Data.ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+dotnet ef migrations add "Migrations_Note"
+dotnet ef database update
