@@ -58,6 +58,7 @@ namespace DemoMVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Câu lệnh lưu trong CSDL
                 _context.Add(student);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -139,13 +140,14 @@ namespace DemoMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+            // trả về dữ liệu var
             var student = await _context.Student.FindAsync(id);
             if (student != null)
             {
                 _context.Student.Remove(student);
             }
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); // lưu thay đổi vào trong csdl
             return RedirectToAction(nameof(Index));
         }
 
