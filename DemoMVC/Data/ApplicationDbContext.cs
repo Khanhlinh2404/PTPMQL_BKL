@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DemoMVC.Models.Entities;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace DemoMVC.Data
 {
@@ -15,8 +16,11 @@ namespace DemoMVC.Data
         }
 
         public DbSet<Student> Student { get; set; } = default!;
+        public DbSet<Person> people { get; set; } = default!;
+
         public DbSet<Employee> Employee { get; set; } = default!;
-        public DbSet<Customer> Customer { get; set; } = default!;
+      
 
     }
 }
+

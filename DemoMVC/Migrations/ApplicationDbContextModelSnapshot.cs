@@ -16,39 +16,31 @@ namespace DemoMVC.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("DemoMVC.Models.Entities.Customer", b =>
+            modelBuilder.Entity("DemoMVC.Models.Entities.Person", b =>
                 {
-                    b.Property<string>("CustomerId")
+                    b.Property<string>("PersonID")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Address")
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(8)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("HoTen")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Fullname")
+                    b.Property<string>("QueQuan")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("CustomerId");
+                    b.HasKey("PersonID");
 
-                    b.ToTable("Customer");
-                });
+                    b.ToTable("people");
 
-            modelBuilder.Entity("DemoMVC.Models.Entities.Employee", b =>
-                {
-                    b.Property<string>("EmployeeID")
-                        .HasColumnType("TEXT");
+                    b.HasDiscriminator().HasValue("Person");
 
-                    b.Property<string>("Fullname")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("EmployeeID");
-
-                    b.ToTable("Employee");
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("DemoMVC.Models.Entities.Student", b =>
@@ -67,6 +59,21 @@ namespace DemoMVC.Migrations
                     b.HasKey("StudentID");
 
                     b.ToTable("Student");
+                });
+
+            modelBuilder.Entity("DemoMVC.Models.Entities.Employee", b =>
+                {
+                    b.HasBaseType("DemoMVC.Models.Entities.Person");
+
+                    b.Property<string>("Company")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmployeeID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("Employee");
                 });
 #pragma warning restore 612, 618
         }
